@@ -13,14 +13,14 @@ const CharactersDetails = () => {
   useEffect(() => {
     const getCharacters = async () => {
       const characterApi = await fetch(
-        `https://game-of-thrones-json-server.vercel.app/characters/${id}`
+        `https://servidor-tronos.vercel.app/characters/${id}`
       );
       const characterJson = await characterApi.json();
       console.log(characterJson);
       console.log(id);
       setCharacter(characterJson);
       const housesApi = await fetch(
-        `https://game-of-thrones-json-server.vercel.app/houses/${characterJson.house}`
+        `https://servidor-tronos.vercel.app/houses/${characterJson.house}`
       );
       const housesJson = await housesApi.json();
       setHouses(housesJson[0]);
