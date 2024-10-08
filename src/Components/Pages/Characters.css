@@ -1,0 +1,84 @@
+.background{
+    background-color: black;
+}
+.lupaybuscador{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: last baseline;
+  border-bottom: 2px;
+  border-bottom-color: white;
+  border-bottom-style: solid ;
+  height: 8vh;
+  margin-left: 11.2vw;
+}
+
+.buscador{
+  width: 35vw;
+  height: 5vh;
+  /* margin: 19px 366px 2px 12px; */
+  margin-left: 5px;
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  background-color: black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border: none;
+  }
+  .lupa{
+      width: 21px;
+      height: 21px;
+  }
+  .conjunto-images{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+    .all-images{
+      display: flex;
+      text-align: center;
+      flex-basis: calc(20% - 40px);
+      margin: 40px;
+      flex-direction: column;
+     
+    }
+    
+    .personaje{
+        width: 30vw;
+        height: 30vw;
+        padding: 10px;
+        margin: 0 0 0 0 18px;
+    }
+    .imagen-div{
+        width: 250px;
+        height: 300px;
+        position: relative;
+      }
+      
+      /* .hover{
+        position: absolute;
+        bottom: 45px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 3px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        opacity: 0;
+        text-align: center;
+        font-size: 12px;
+        transition: opacity 0.3s ease-in-out;
+        font-family: "JuegoDeTronos";
+        visibility: hidden;
+    }
+      .imagen-div:hover .hover {
+        opacity: 1;
+        visibility: visible;
+      } */

@@ -1,0 +1,29 @@
+.housesPage {
+    background-color: black;
+    color: white;
+}
+
+.houses {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+
+.houses-object {
+    display: flex;
+    text-align: center;
+    flex-basis: calc(30% - 40px);
+    margin: 20px;
+    flex-direction: column;
+}
+.houseImage{
+width: 70%;
+height: 90%;
+};
+
+.houseType { 
+    
+    text-align: center;
+}

@@ -1,0 +1,165 @@
+
+.nav-enlace {
+  text-decoration: none;
+}
+.fondo-home {
+  background-image: url("https://cdn.zeplin.io/5e1c73baff24c3be01ba9cca/assets/6065c636-48ca-4142-8b36-8fd60a70402b.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span {
+  font-size: 24px;
+  color: white; /* Color del texto */
+}
+
+/* .nav-home {
+  
+  margin-top: auto; 
+} */
+
+
+
+
+
+
+.text-container {
+  list-style: none;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  
+  color: white;
+  gap: 120px;
+}
+
+.custom-image {
+  width: 90px; 
+  height: 90px; 
+  border-radius: 90%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Ajusta la imagen dentro del círculo sin recortar */
+
+  margin: center; /* Centra la imagen horizontal y verticalmente */
+}
+
+.contenedor_cronologia {
+  display: flex;
+  flex-direction: column; /* Establece la dirección de apilamiento de los elementos */
+  background-color: black;
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+
+
+.info {
+  text-align: center; 
+}
+
+.crono_name {
+  color: white;
+  font-weight: bold; 
+}
+
+.crono_age {
+
+  color: #fefefe; /* Color de texto más suave para la edad */
+}
+
+.crono_image {
+  position: relative;
+}
+.imagen_cronologia1 {
+
+  width: 100px; /* Ancho fijo para todas las imágenes */
+  height: 100px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área del círculo sin distorsión */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  overflow: hidden; /* Asegura que la imagen no sobresalga del círculo */
+}
+
+.item:nth-child(even) {
+  flex-direction: row-reverse; /* Invierte la dirección de los elementos en pares */
+}
+
+
+
+.item {
+  width: 90%;
+  background-color: black;
+  border-bottom: 2px solid white;
+  display: flex;
+  align-items: center;
+  
+}
+
+.izquierda {
+  padding-top: 62px;
+  padding-bottom: 49px;
+  left: 65px;
+  max-width: 201px;
+  position: relative;
+  border-left: 2px solid white;
+
+}
+
+.derecha {
+  padding-bottom: 47px;
+  padding-top: 59px;
+  left: -151px;
+  position: relative;
+  max-width: 230px;
+  border-right: 2px solid white;
+
+}
+
+.circulo_contenedor {
+  background-color: black; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circulo_numero {
+  left: -35px;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid white;
+  width: 50px; /* ajusta el tamaño según tus necesidades */
+  height: 50px; /* ajusta el tamaño según tus necesidades */
+  border-radius: 50%; /* hace que el div sea un círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* color del texto */
+  font-size: 24px; /* tamaño del texto */
+}
+.flecha_contenedor {
+  background-color: black; /* Fondo negro */
+}
+
+.flecha_imagen_abajo,
+.flecha_imagen_arriba {
+  display: flex;
+    left: -36px;
+    color: white;
+    position: relative;
+    justify-content: center;
+
+
+}
+.navega_cronologia{
+  
+  background-color: black;
+}
+.cronologia_contendor_general{
+  
+  background-color: black;
+}

@@ -1,0 +1,28 @@
+.contenedor_general_detail_houses {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+    
+}
+  
+  .image_namehouse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .otras_casa_detalles {
+    gap: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+  }
+  
+  .otras_casa_detalles > div {
+    flex: 1; /* Hace que cada div ocupe el mismo espacio dentro del contenedor padre */
+    margin-right: 10px; /* Agrega espacio entre cada par de divs */
+  }
+  .houseDetails_contenedor_general{
+    background-color: black;
+  }
