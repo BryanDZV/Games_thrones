@@ -1,5 +1,7 @@
 .cronologia_contendor_general {
   position: relative;
+  max-width: 1200px; /* Limita el ancho del contenedor general */
+  margin: 0 auto; /* Centra el contenedor en pantallas grandes */
 }
 
 .navega_cronologia {
@@ -53,14 +55,14 @@
 
 .crono_image {
   position: relative;
-  width: 45%;
+  width: 90%; /* Usar un ancho mayor para pantallas grandes */
+  max-width: 800px; /* Ajustar según sea necesario */
   margin: 10px 0;
 }
 
 .info {
   position: relative;
   bottom: 10px; /* Ajusta este valor para mover el texto hacia abajo o arriba */
-
   text-align: center; /* Centra el texto */
   width: 100%; /* Asegura que el texto ocupe el ancho de la imagen */
 }
@@ -79,6 +81,26 @@
 }
 
 .imagen_cronologia1 {
-  width: 100%; /* Ajusta el ancho de la imagen */
+  width: 100%; /* Mantiene el ancho al 100% de su contenedor */
   height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Media queries para ajustar el tamaño de las imágenes en pantallas pequeñas */
+@media (max-width: 768px) {
+  .crono_image {
+    width: 100%; /* Se ajusta al 100% en pantallas pequeñas */
+    max-width: none; /* Elimina el límite de ancho máximo */
+  }
+}
+
+/* Estilo para la línea continua que pasa por las imágenes */
+.linea_continua {
+  position: absolute;
+  left: 50%; /* Centra la línea */
+  top: 0; /* Alinea la línea con el borde superior del contenedor */
+  width: 2px; /* Grosor de la línea */
+  height: 100%; /* Altura completa del contenedor */
+  background-color: black; /* Color de la línea */
+  transform: translateX(-50%); /* Ajusta la línea para centrarla */
+  z-index: -1; /* Envía la línea detrás de las imágenes */
 }

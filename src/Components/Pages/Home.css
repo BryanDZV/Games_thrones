@@ -1,0 +1,29 @@
+.fondo-home {
+  gap: 10%;
+  display: flex; /* Utiliza flexbox */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  justify-content: flex-start; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-color: #282c34; /* Color de fondo */
+  color: white; /* Color del texto del título */
+  padding: 0 2rem; /* Añade un padding lateral */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+}
+
+.span {
+  position: relative;
+  top: 5%;
+}
+.titulo-texto {
+  font-size: 5vw; /* Tamaño de la fuente en vw (viewport width) */
+  text-align: center; /* Alineación del texto al centro */
+  line-height: 1.2; /* Espaciado entre líneas */
+  margin: 0; /* Elimina márgenes */
+}
+
+@media (max-width: 768px) {
+  .titulo-texto {
+    font-size: 8vw; /* Aumenta el tamaño de fuente en pantallas pequeñas */
+  }
+}

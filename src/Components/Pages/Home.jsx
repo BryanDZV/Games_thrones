@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Home.css";
 import "../Pages/Home";
 import Navega from "../Core/Navega";
 

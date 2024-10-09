@@ -63,6 +63,7 @@ export default function Cronologia1() {
             ) : (
               <FontAwesomeIcon icon={faChevronDown} />
             )}
+            evr{" "}
           </div>
         </div>
 
