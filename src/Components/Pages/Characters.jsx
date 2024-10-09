@@ -13,9 +13,11 @@ const Characters = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       try {
-        const response = await axios.get("https://servidor-tronos.vercel.app/");
-        console.log(response);
-        setCharacters(response.data);
+        const response = await axios.get(
+          "https://servidor-tronos.vercel.app/characters"
+        );
+        console.log(response.data); // Verifica la estructura de la respuesta
+        setCharacters(Array.isArray(response.data) ? response.data : []);
       } catch (error) {
         console.log("Error al obtener los personajes");
       }
@@ -37,7 +39,7 @@ const Characters = () => {
   return (
     <div className="background">
       <h1>BIENVENIDO A CHARACTERES</h1>
-      <Navega></Navega>
+      <Navega />
       <div className="lupaybuscador">
         <img
           className="lupa"
@@ -60,8 +62,8 @@ const Characters = () => {
               <img
                 className="personaje"
                 src={character.image}
-                alt="/"
-                onClick={() => handleCharacterClick()}
+                alt={character.name}
+                onClick={() => handleCharacterClick(character)} // Pasar el personaje aquí
               />
               <h4>{character.name}</h4>
             </Link>
@@ -71,7 +73,6 @@ const Characters = () => {
             </div>
           </div>
         ))}
-        ;
       </div>
       {selectedCharacter && <CharactersDetails character={selectedCharacter} />}
     </div>

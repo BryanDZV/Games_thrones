@@ -13,7 +13,7 @@ const Houses = () => {
     const fetchHouses = async () => {
       try {
         const llamada = await axios.get(
-          "https://servidor-tronos.vercel.app/Houses"
+          "https://servidor-tronos.vercel.app/houses"
         );
         console.log(llamada);
 

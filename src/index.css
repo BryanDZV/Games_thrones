@@ -1,20 +1,26 @@
 @font-face {
-  font-family: 'MiFuente';
-  src: url('../public/Game_of_Thrones.ttf') format('truetype');
+  font-family: "MiFuente";
+  src: url("../public/Game_of_Thrones.ttf") format("truetype");
 }
+
 body {
-  border: 0;
-padding: 0;
   margin: 0;
+  padding: 0;
   height: 100vh;
-  font-family: 'MiFuente', sans-serif,
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "MiFuente", sans-serif, "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Estilos Responsivos Globales */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+  }
 }

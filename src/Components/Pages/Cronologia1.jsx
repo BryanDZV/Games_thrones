@@ -1,20 +1,21 @@
-import "./Cronologia1";
 import Navega from "../Core/Navega";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-
+import "./Cronologia1.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export default function Cronologia1() {
   const [cronologias1, setCronologias1] = useState([]);
-  const [ordenAscendente, setOrdenAscendente] = useState(true); // asi muestro el orden ascendente o descendente
-  const [edadMostrada, setEdadMostrada] = useState("20"); // asi muestro la edad más joven o más vieja
+  const [ordenAscendente, setOrdenAscendente] = useState(true);
+  const [edadMostrada, setEdadMostrada] = useState("20");
 
   useEffect(() => {
     const getCharacters = async () => {
-      const response = await axios.get("https://servidor-tronos.vercel.app");
+      const response = await axios.get(
+        "https://servidor-tronos.vercel.app/characters"
+      );
       console.log(response);
       setCronologias1(response.data);
     };
@@ -22,9 +23,7 @@ export default function Cronologia1() {
   }, []);
 
   const ordenarAge = () => {
-    // Creamos una copia de las cronologías para no modificar el estado directamente
     const cronologiasOrdenadas = [...cronologias1];
-    //usa el sort siempre que quieras ordenar
     cronologiasOrdenadas.sort((a, b) => {
       if (ordenAscendente) {
         return a.age - b.age;
@@ -33,32 +32,15 @@ export default function Cronologia1() {
       }
     });
     setCronologias1(cronologiasOrdenadas);
+    setOrdenAscendente(!ordenAscendente);
 
-    setOrdenAscendente(!ordenAscendente); // Cambiamos el estado para cambiar el orden la próxima vez
-
-    // Calculamos la edad mostrada
     const edades = cronologiasOrdenadas.map((cronologia) => cronologia.age);
-
-    //SI USO FILTROOOOOO
-    //   const edadesFiltradas = edades.filter(edad => edad > 0);//tengo que usar filtro o me detecta 0 y al usar match min de devuelve 0
-    //TAMBIEN PEUOD INICIAR EL ESTADO CON 20 pero ME PODRIA SACAR OTRO MENORES DE ESA EDAD
-    //O PODRIA PODER TAMBIEN QUE ME PINTE SOLO SI LA EDAD ES MAYOR DE 20 O 15 .. QUE NO SEA 0 PARA QUE VALGA EL MATCH
-    // const edadMostradaCalculada = ordenAscendente ? Math.min(...edadesFiltradas) : Math.max(...edadesFiltradas);
-
-    //SINO USO FILTRO00
-
     const edadMostradaCalculada = ordenAscendente
       ? Math.min(...edades)
       : Math.max(...edades);
-    setEdadMostrada(edadMostradaCalculada === 0 ? "20" : edadMostradaCalculada); //obligo que mi arary sea 20 asi no me da 0
+    setEdadMostrada(edadMostradaCalculada === 0 ? "20" : edadMostradaCalculada);
   };
-  {
-    /* condicional sin filtromas dificil.... de pensar */
-  }
-  {
-    /* condicional si usas filtro  {ordenAscendente.age>15&& 
-        <div className="circulo_numero" onClick={ordenarAge}>{edadMostrada}</div>} mas facil de pensar*/
-  }
+
   return (
     <>
       <div className="cronologia_contendor_general">
@@ -73,14 +55,17 @@ export default function Cronologia1() {
             </div>
           )}
         </div>
+
         <div className="flecha_contenedor">
-          <div className="flecha_imagen_abajo">
-            {ordenAscendente ? <FontAwesomeIcon icon={faChevronUp} /> : null}
-          </div>
-          <div className="flecha_imagen_arriba">
-            {!ordenAscendente ? <FontAwesomeIcon icon={faChevronDown} /> : null}
+          <div className="flecha_imagen">
+            {ordenAscendente ? (
+              <FontAwesomeIcon icon={faChevronUp} />
+            ) : (
+              <FontAwesomeIcon icon={faChevronDown} />
+            )}
           </div>
         </div>
+
         <div className="contenedor_cronologia">
           {cronologias1.map(
             (cronologia1, index) =>

@@ -1,0 +1,84 @@
+.cronologia_contendor_general {
+  position: relative;
+}
+
+.navega_cronologia {
+  margin-bottom: 20px;
+}
+
+.circulo_contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.circulo_numero {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+}
+
+.flecha_contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.flecha_imagen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor_cronologia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+}
+
+.crono_image {
+  position: relative;
+  width: 45%;
+  margin: 10px 0;
+}
+
+.info {
+  position: relative;
+  bottom: 10px; /* Ajusta este valor para mover el texto hacia abajo o arriba */
+
+  text-align: center; /* Centra el texto */
+  width: 100%; /* Asegura que el texto ocupe el ancho de la imagen */
+}
+
+.crono_name,
+.crono_age {
+  color: white;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo semi-transparente para mejorar la legibilidad */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.imagen_cronologia1 {
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: auto; /* Mantiene la relación de aspecto */
+}
